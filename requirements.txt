@@ -9,7 +9,7 @@ brotli
 certifi
 cffi
 charset-normalizer
-click
+click==8.2.1
 colorama
 coverage
 csscompressor
@@ -48,6 +48,7 @@ mdx-truly-sane-lists
 mergedeep
 mike
 mkdocs
+mkdocs_puml
 mkdocs-abs-rel-plugin
 mkdocs-add-number-plugin
 mkdocs-autolinks-plugin

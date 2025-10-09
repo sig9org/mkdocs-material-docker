@@ -49,8 +49,9 @@ Installed extensions
 - [Markdown extra data](https://github.com/rosscdh/mkdocs-markdownextradata-plugin) injects the mkdocs.yml extra variables into the markdown template.
 - [Material Extensions](https://github.com/facelessuser/mkdocs-material-extensions) extension resources for MkDocs for Material
 - [Minify](https://github.com/byrnereese/mkdocs-minify-plugin) to minify HTML and/or JS files prior to being written to disk.
-- [Mkdocstrings](https://mkdocstrings.github.io/) automatic documentation from sources.
 - [Mkdocs with Confluence](https://github.com/pawelsikora/mkdocs-with-confluence/) Plugin for uploading markdown documentation to Confluence via Confluence REST API
+- [mkdocs_puml](https://github.com/MikhailKravets/mkdocs_puml) is a fast and simple package that brings plantuml diagrams to MkDocs documentation.
+- [Mkdocstrings](https://mkdocstrings.github.io/) automatic documentation from sources.
 - [Monorepo](https://github.com/spotify/mkdocs-monorepo-plugin) Build multiple documentation in a single Mkdocs. Designed for large codebases.
 - [Multirepo](https://github.com/jdoiro3/mkdocs-multirepo-plugin) Build documentation in multiple repos into one site.
 - [Nav weight](https://github.com/shu307/mkdocs-nav-weight) enables to organize navigation in a more markdownic way

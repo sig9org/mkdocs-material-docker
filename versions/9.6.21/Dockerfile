@@ -1,5 +1,5 @@
 # Build Stage
-FROM python:3.13.7-slim AS builder
+FROM python:3.13.8-slim AS builder
 
 # Environment variables
 ENV PACKAGES=/usr/local/lib/python3.13/site-packages
@@ -24,10 +24,10 @@ RUN pip install --no-cache-dir --upgrade pip && \
         bleach-allowlist==1.0.3 \
         bracex==2.6 \
         brotli==1.1.0 \
-        certifi==2025.8.3 \
+        certifi==2025.10.5 \
         cffi==2.0.0 \
         charset-normalizer==3.4.3 \
-        click==8.3.0 \
+        click==8.2.1 \
         colorama==0.4.6 \
         coverage==7.10.7 \
         csscompressor==0.9.5 \
@@ -35,7 +35,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         dacite==1.9.2 \
         decorator==5.2.1 \
         defusedxml==0.7.1 \
-        essentials==1.1.7 \
+        essentials==1.1.8 \
         essentials-openapi==1.2.1 \
         fonttools==4.60.1 \
         future==1.0.0 \
@@ -103,6 +103,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         mkdocs-no-sitemap-plugin==0.0.1 \
         mkdocs-print-site-plugin==2.8 \
         mkdocs-publisher==1.4.8 \
+        mkdocs-puml==2.1.0 \
         mkdocs-pymdownx-material-extras==2.8 \
         mkdocs-redirects==1.2.2 \
         mkdocs-safe-text-plugin==1.6.1 \
@@ -114,6 +115,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         mkdocs-video==1.5.0 \
         mkdocstrings==0.30.1 \
         mkpdfs-mkdocs==1.0.1 \
+        msgpack==1.1.2 \
         mypy-extensions==1.1.0 \
         natsort==8.4.0 \
         neoteroi-mkdocs==1.1.3 \
@@ -121,7 +123,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         paginate==0.5.7 \
         pathspec==0.12.1 \
         pillow==11.3.0 \
-        platformdirs==4.4.0 \
+        platformdirs==4.5.0 \
         pluggy==1.6.0 \
         pycparser==2.23 \
         pydyf==0.11.0 \
@@ -141,7 +143,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         requests==2.32.5 \
         responses==0.25.8 \
         result==0.17.0 \
-        rich==14.1.0 \
+        rich==13.9.4 \
         ruamel-yaml==0.18.15 \
         ruamel-yaml-clib==0.2.14 \
         setuptools==80.9.0 \
@@ -177,7 +179,7 @@ RUN find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true && 
     rm -rf htmlcov/
 
 # Runtime Stage
-FROM python:3.13.7-slim AS runtime
+FROM python:3.13.8-slim AS runtime
 
 # Copy all from builder
 COPY --from=builder /usr/local/lib/python3.13/site-packages /usr/local/lib/python3.13/site-packages
