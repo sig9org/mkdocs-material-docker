@@ -47,6 +47,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         hjson==3.1.0 \
         htmlmin2==0.1.13 \
         httpcore==1.0.9 \
+        httplib2==0.31.0 \
         httpx==0.28.1 \
         idna==3.10 \
         importlib-metadata==8.7.0 \
@@ -71,6 +72,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
         mkdocs-autolinks-plugin==0.7.1 \
         mkdocs-autorefs==1.4.3 \
         mkdocs-awesome-pages-plugin==2.10.1 \
+        mkdocs-breadcrumbs-plugin==0.1.14 \
+        mkdocs-build-plantuml-plugin==1.11.0 \
         mkdocs-categories-plugin==0.5.0 \
         mkdocs-cinder==1.2.0 \
         mkdocs-codeinclude-plugin==0.2.1 \

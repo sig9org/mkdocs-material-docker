@@ -54,6 +54,8 @@ mkdocs-add-number-plugin
 mkdocs-autolinks-plugin
 mkdocs-autorefs
 mkdocs-awesome-pages-plugin
+mkdocs-breadcrumbs-plugin
+mkdocs-build-plantuml-plugin
 mkdocs-categories-plugin
 mkdocs-cinder
 mkdocs-codeinclude-plugin

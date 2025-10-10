@@ -51,6 +51,8 @@ Installed extensions
 - [Minify](https://github.com/byrnereese/mkdocs-minify-plugin) to minify HTML and/or JS files prior to being written to disk.
 - [Mkdocs with Confluence](https://github.com/pawelsikora/mkdocs-with-confluence/) Plugin for uploading markdown documentation to Confluence via Confluence REST API
 - [mkdocs_puml](https://github.com/MikhailKravets/mkdocs_puml) is a fast and simple package that brings plantuml diagrams to MkDocs documentation.
+- [mkdocs-breadcrumbs-plugin](https://github.com/mihaigalos/mkdocs-breadcrumbs-plugin) is Mkdocs location-based breadcrumbs navigation.
+- [mkdocs-build-plantuml-plugin](https://github.com/christo-ph/mkdocs_build_plantuml) automates the generation of PlantUML image files when using mkdocs serve.
 - [Mkdocstrings](https://mkdocstrings.github.io/) automatic documentation from sources.
 - [Monorepo](https://github.com/spotify/mkdocs-monorepo-plugin) Build multiple documentation in a single Mkdocs. Designed for large codebases.
 - [Multirepo](https://github.com/jdoiro3/mkdocs-multirepo-plugin) Build documentation in multiple repos into one site.
