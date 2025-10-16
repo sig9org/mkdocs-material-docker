@@ -7,19 +7,18 @@ docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
     --tag sig9/mkdocs-material:latest \
-    versions/9.6.21/
+    versions/9.6.22/
 ```
 
 ```sh
 docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
-    --tag sig9/mkdocs-material:9.6.21 \
-    versions/9.6.21/
+    --tag sig9/mkdocs-material:9.6.22 \
+    versions/9.6.22/
 ```
 
-Installed extensions
---------------------
+## Installed extensions
 
 ### Themes
 
