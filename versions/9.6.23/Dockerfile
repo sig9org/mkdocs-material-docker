@@ -12,19 +12,12 @@ WORKDIR /build
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
+    tini \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
-        annotated-types==0.7.0 \
-        ansible-core==2.19.3 \
         anyio==4.11.0 \
-        appnope==0.1.4 \
-        argon2-cffi==25.1.0 \
-        argon2-cffi-bindings==25.1.0 \
-        arrow==1.4.0 \
-        asttokens==3.0.0 \
-        attrs==25.4.0 \
         babel==2.17.0 \
         backrefs==5.9 \
         beautifulsoup4==4.14.2 \
@@ -32,44 +25,27 @@ RUN pip install --no-cache-dir --upgrade pip && \
         bleach-allowlist==1.0.3 \
         bracex==2.6 \
         brotli==1.1.0 \
-        cachecontrol==0.14.3 \
         certifi==2025.10.5 \
         cffi==2.0.0 \
         charset-normalizer==3.4.4 \
         click==8.2.1 \
-        cloudpickle==3.1.1 \
         colorama==0.4.6 \
-        comm==0.2.3 \
         coverage==7.11.0 \
-        cryptography==46.0.3 \
         csscompressor==0.9.5 \
         cssselect2==0.8.0 \
         dacite==1.9.2 \
-        debugpy==1.8.17 \
         decorator==5.2.1 \
         defusedxml==0.7.1 \
-        doit==0.36.0 \
-        editorconfig==0.17.1 \
         essentials==1.1.8 \
         essentials-openapi==1.2.1 \
-        executing==2.2.1 \
-        extruct==0.18.0 \
-        fastjsonschema==2.21.2 \
-        feedgenerator==2.2.1 \
-        filelock==3.20.0 \
         fonttools==4.60.1 \
-        fqdn==1.5.1 \
         future==1.0.0 \
         geocoder==1.38.1 \
         ghp-import==2.1.0 \
         gitdb==4.0.12 \
-        gitmatch==0.2.1 \
         gitpython==3.1.45 \
-        griffe==1.14.0 \
         h11==0.16.0 \
         hjson==3.1.0 \
-        html-text==0.7.1 \
-        html5lib==1.1 \
         htmlmin2==0.1.13 \
         httpcore==1.0.9 \
         httplib2==0.31.0 \
@@ -77,306 +53,129 @@ RUN pip install --no-cache-dir --upgrade pip && \
         idna==3.11 \
         importlib-metadata==8.7.0 \
         importlib-resources==6.5.2 \
-        inflect==7.5.0 \
         iniconfig==2.3.0 \
-        ipykernel==7.1.0 \
-        ipython==9.6.0 \
-        ipython-pygments-lexers==1.1.1 \
-        isoduration==20.11.0 \
-        jedi==0.19.2 \
         jinja2==3.1.6 \
-        jsbeautifier==1.15.4 \
         jsmin==3.0.1 \
-        json5==0.12.1 \
-        jsonpickle==4.1.1 \
-        jsonpointer==3.0.0 \
-        jsonschema==4.25.1 \
-        jsonschema-specifications==2025.9.1 \
-        jstyleson==0.0.2 \
-        jupyter-client==8.6.3 \
-        jupyter-core==5.9.1 \
-        jupyter-events==0.12.0 \
-        jupyter-server==2.17.0 \
-        jupyter-server-terminals==0.5.3 \
-        jupyterlab-pygments==0.3.0 \
-        jupyterlab-server==2.28.0 \
-        jupyterlite-core==0.6.4 \
-        jupyterlite-pyodide-kernel==0.6.1 \
-        jupytext==1.18.1 \
-        lark==1.3.1 \
-        libsass==0.23.0 \
         lxml==6.0.2 \
-        lxml-html-clean==0.4.3 \
         markdown==3.9 \
         markdown-customblocks==1.5.3 \
         markdown-include==0.8.1 \
         markdown-it-py==4.0.0 \
-        markdownify==1.2.0 \
         markupsafe==3.0.3 \
-        matplotlib-inline==0.2.1 \
-        mdformat==1.0.0 \
-        mdit-py-plugins==0.5.0 \
         mdurl==0.1.2 \
         mdx-breakless-lists==1.0.1 \
         mdx-truly-sane-lists==1.3 \
         mergedeep==1.3.4 \
-        mf2py==2.0.1 \
         mike==2.1.3 \
-        mistune==3.0.2 \
         mkdocs==1.6.1 \
         mkdocs-abs-rel-plugin==0.2.4 \
         mkdocs-add-number-plugin==1.2.2 \
-        mkdocs-addresses==0.5.2 \
-        mkdocs-ai-summary-wcowin==1.2.2 \
-        mkdocs-ansible-collection==1.1.0 \
-        mkdocs-api-autonav==0.4.0 \
-        mkdocs-apidescribed-plugin==1.2.0 \
-        mkdocs-asciidoctor-backend==0.1.13 \
-        mkdocs-asciinema-player==0.18.0 \
-        mkdocs-audiotag==0.1.1 \
-        mkdocs-authors-plugin==0.1.0 \
-        mkdocs-auto-figure-list==0.2.2 \
-        mkdocs-auto-refresh-build-pages==1.0.3 \
         mkdocs-autolinks-plugin==0.7.1 \
         mkdocs-autorefs==1.4.3 \
-        mkdocs-awesome-nav==3.2.0 \
         mkdocs-awesome-pages-plugin==2.10.1 \
-        mkdocs-backlinks-section-plugin==0.0.7 \
-        mkdocs-badges==0.5.0 \
         mkdocs-breadcrumbs-plugin==0.1.14 \
         mkdocs-build-plantuml-plugin==1.11.0 \
-        mkdocs-callouts-codeblock==1.16.5 \
         mkdocs-categories-plugin==0.5.0 \
-        mkdocs-cc-license-plugin==1.0.1 \
-        mkdocs-changelog-feed-plugin==2025.10.26 \
-        mkdocs-charts-plugin==0.0.13 \
         mkdocs-cinder==1.2.0 \
-        mkdocs-click==0.9.0 \
         mkdocs-codeinclude-plugin==0.2.1 \
-        mkdocs-copy-markdown==0.1.0 \
-        mkdocs-copy-to-llm==0.2.6 \
-        mkdocs-coverage==2.0.0 \
-        mkdocs-decodiff-plugin==0.0.6 \
-        mkdocs-document-dates==3.4.6 \
-        mkdocs-drawio==1.12.0 \
         mkdocs-embed-external-markdown==3.0.2 \
-        mkdocs-encryptcontent-plugin==3.0.5 \
-        mkdocs-entangled-plugin==0.2.0 \
         mkdocs-enumerate-headings-plugin==0.6.2 \
-        mkdocs-excalidraw==0.4.1 \
         mkdocs-exclude==1.0.2 \
         mkdocs-exclude-search==0.6.6 \
         mkdocs-exclude-unused-files==1.4.1 \
-        mkdocs-execute-plugin==0.0.9 \
         mkdocs-extract-listings-plugin==0.2.1 \
-        mkdocs-extrafiles==1.0.0 \
-        mkdocs-ezglossary-plugin==2.1.0 \
-        mkdocs-fedi-comments==0.1.6 \
-        mkdocs-fun-plugin==0.2.0 \
         mkdocs-gallery==0.10.4 \
         mkdocs-gemini-chatbot==1.0.1 \
         mkdocs-gen-files==0.5.0 \
         mkdocs-get-deps==0.2.0 \
         mkdocs-git-authors-plugin==0.10.0 \
         mkdocs-git-committers-plugin-2==2.5.0 \
-        mkdocs-git-latest-changes-plugin==0.0.22 \
         mkdocs-git-revision-date-localized-plugin==1.5.0 \
-        mkdocs-glightbox==0.5.2 \
-        mkdocs-google-translate==1.3.1 \
-        mkdocs-htmlproofer-plugin==1.4.0 \
-        mkdocs-image-gallery-plugin==1.3.0 \
         mkdocs-img2fig-plugin==0.9.3 \
-        mkdocs-include-folders==0.1.4 \
         mkdocs-include-markdown-plugin==7.2.0 \
-        mkdocs-include-stubs-plugin==1.0.2 \
-        mkdocs-ipynb==0.1.1 \
-        mkdocs-jupyterlite==0.3.2 \
         mkdocs-kroki-plugin==0.9.0 \
-        mkdocs-link-cards==0.1.0 \
         mkdocs-link-marker==0.2.0 \
         mkdocs-literate-nav==0.6.2 \
-        mkdocs-llmstxt==0.2.0 \
-        mkdocs-llmstxt-md==0.2.0 \
         mkdocs-localsearch==0.9.2 \
-        mkdocs-macros-adr-summary==1.3.0 \
         mkdocs-macros-plugin==1.4.1 \
         mkdocs-markdownextradata-plugin==0.2.6 \
-        mkdocs-markupsafe-markdown-filter==0.1.1 \
         mkdocs-material==9.6.23 \
-        mkdocs-material-codeberg-source-facts==0.1.2 \
         mkdocs-material-extensions==1.3.1 \
-        mkdocs-mcq==0.1.4 \
-        mkdocs-md-preview==1.0.0 \
-        mkdocs-media-gallery-plugin==1.0.0 \
         mkdocs-merge==0.11.0 \
-        mkdocs-mermaid-to-image==1.3.1 \
-        mkdocs-mermaid-zoom==0.1.0 \
-        mkdocs-mermaid2-plugin==1.2.3 \
-        mkdocs-meta-descriptions-plugin==4.1.0 \
-        mkdocs-minify-html-plugin==0.3.9 \
         mkdocs-minify-plugin==0.8.0 \
         mkdocs-monorepo-plugin==1.1.2 \
         mkdocs-multirepo==0.5.2 \
         mkdocs-multirepo-plugin==0.8.3 \
         mkdocs-nav-weight==0.3.0 \
-        mkdocs-navsorted-plugin==1.0.0 \
-        mkdocs-nbconvert==0.5 \
-        mkdocs-nbsync==0.2.2 \
-        mkdocs-network-graph-plugin==1.0.3 \
         mkdocs-no-sitemap-plugin==0.0.1 \
-        mkdocs-nodegraph==0.4.1 \
-        mkdocs-notion-plugin==0.0.7 \
-        mkdocs-obsidian-bridge==1.3.1 \
-        mkdocs-panzoom-plugin==0.4.2 \
-        mkdocs-pipeline-visualizer==0.4.2 \
         mkdocs-print-site-plugin==2.8 \
         mkdocs-publish-control==0.1.2 \
         mkdocs-publisher==1.4.8 \
-        mkdocs-puml==1.4.1 \
+        mkdocs-puml==2.1.0 \
         mkdocs-pymdownx-material-extras==2.8 \
-        mkdocs-quiz==0.0.41 \
-        mkdocs-recently-updated-docs==1.1 \
         mkdocs-redirects==1.2.2 \
-        mkdocs-redoc-tag==0.2.0 \
-        mkdocs-rich-argparse==0.1.2 \
-        mkdocs-rss-plugin==1.17.4 \
         mkdocs-safe-text-plugin==1.6.1 \
         mkdocs-same-dir==0.1.3 \
         mkdocs-section-index==0.3.10 \
         mkdocs-simple-hooks==0.1.5 \
         mkdocs-simple-plugin==3.2.4 \
-        mkdocs-site-urls==0.3.1 \
-        mkdocs-sitemap-exclusion==0.0.1 \
-        mkdocs-snippets==1.3.2 \
-        mkdocs-spellcheck==1.1.2 \
-        mkdocs-sqlite-console==2.1.1 \
-        mkdocs-statistics-plugin==0.1.5 \
-        mkdocs-suppress-logs-plugin==0.1.1 \
         mkdocs-swagger-ui-tag==0.7.2 \
         mkdocs-table-of-figures==0.5.7 \
-        mkdocs-test==0.5.6 \
-        mkdocs-to-pdf==0.10.1 \
         mkdocs-toggle-sidebar-plugin==0.0.8 \
-        mkdocs-towncrier==0.1.5 \
-        mkdocs-ultralytics-plugin==0.1.30 \
         mkdocs-video==1.5.0 \
-        mkdocs-wavesurfer==0.1.1 \
-        mkdocs-webcontext-plugin==0.1.1 \
-        mkdocs-wikilinks-plugin==0.1.1 \
-        mkdocs-wikipedia==0.1.0 \
-        mkdocs-zip-folders==1.0.5 \
         mkdocstrings==0.30.1 \
-        mkdocstrings-python==1.18.2 \
         mkpdfs-mkdocs==1.0.1 \
-        more-itertools==10.8.0 \
         msgpack==1.1.2 \
         mypy-extensions==1.1.0 \
         natsort==8.4.0 \
-        nbclient==0.10.2 \
-        nbconvert==7.16.6 \
-        nbformat==5.10.4 \
-        nbstore==0.5.5 \
-        nbsync==0.4.2 \
         neoteroi-mkdocs==1.1.3 \
-        nest-asyncio==1.6.0 \
-        networkx==3.5 \
-        notion-client==2.7.0 \
-        numpy==2.3.4 \
-        obsidian-callouts==1.0.1 \
-        obsidian-media==2.0.0 \
         packaging==25.0 \
         paginate==0.5.7 \
-        pandas==2.3.3 \
-        pandocfilters==1.5.1 \
-        parso==0.8.5 \
         pathspec==0.12.1 \
-        pexpect==4.9.0 \
         pillow==12.0.0 \
-        pkginfo==1.12.1.2 \
         platformdirs==4.5.0 \
         pluggy==1.6.0 \
-        prometheus-client==0.23.1 \
-        prompt-toolkit==3.0.52 \
-        psutil==7.1.3 \
-        ptyprocess==0.7.0 \
-        pure-eval==0.2.3 \
         pycparser==2.23 \
-        pycryptodome==3.23.0 \
-        pydantic==2.12.3 \
-        pydantic-core==2.41.4 \
-        pydyf==0.10.0 \
-        pyembed==1.3.3 \
-        pyembed-markdown==1.1.0 \
+        pydyf==0.11.0 \
         pygments==2.19.2 \
-        pygtrie==2.5.0 \
         pymdown-extensions==10.16.1 \
         pyparsing==3.2.5 \
         pyphen==0.17.2 \
-        pyrdfa3==3.6.4 \
         pytest==8.4.2 \
         pytest-cov==3.0.0 \
         python-dateutil==2.9.0.post0 \
         python-dotenv==1.2.1 \
-        python-json-logger==4.0.0 \
         python-magic==0.4.27 \
         python-slugify==8.0.4 \
         pytz==2025.2 \
-        pyvis==0.3.2 \
         pyyaml==6.0.3 \
         pyyaml-env-tag==1.1 \
-        pyzmq==27.1.0 \
         ratelim==0.1.6 \
-        rdflib==7.4.0 \
-        referencing==0.37.0 \
         requests==2.32.5 \
-        resolvelib==1.2.1 \
         responses==0.25.8 \
         result==0.17.0 \
-        rfc3339-validator==0.1.4 \
-        rfc3986-validator==0.1.1 \
-        rfc3987-syntax==1.1.0 \
-        rich==14.2.0 \
-        rich-argparse==1.7.2 \
-        rpds-py==0.28.0 \
+        rich==13.9.4 \
         ruamel-yaml==0.18.16 \
         ruamel-yaml-clib==0.2.14 \
-        ruff==0.14.3 \
-        selectolax==0.4.0 \
-        send2trash==1.8.3 \
         setuptools==80.9.0 \
         six==1.17.0 \
         smmap==5.0.2 \
         sniffio==1.3.1 \
         soupsieve==2.8 \
-        stack-data==0.6.3 \
         super-collections==0.6.2 \
         termcolor==3.2.0 \
-        terminado==0.18.1 \
         text-unidecode==1.3 \
         tinycss2==1.4.0 \
         tinyhtml5==2.0.0 \
-        tornado==6.5.2 \
-        towncrier==25.8.0 \
         tqdm==4.67.1 \
-        traitlets==5.14.3 \
-        typeguard==4.4.4 \
         typing-extensions==4.15.0 \
         typing-inspect==0.8.0 \
-        typing-inspection==0.4.2 \
-        tzdata==2025.2 \
-        unidecode==1.4.0 \
-        uri-template==1.3.0 \
         urllib3==1.26.20 \
-        versioneer==0.29 \
         verspec==0.1.0 \
-        w3lib==2.3.1 \
         watchdog==6.0.0 \
         wcmatch==10.1 \
-        wcwidth==0.2.14 \
-        weasyprint==62.3 \
-        webcolors==25.10.0 \
+        weasyprint==66.0 \
         webencodings==0.5.1 \
-        websocket-client==1.9.0 \
         yamlns==0.12.2 \
         zipp==3.23.0 \
         zopfli==0.2.3.post1
@@ -396,9 +195,10 @@ FROM python:3.13.9-slim AS runtime
 # Copy all from builder
 COPY --from=builder /usr/local/lib/python3.13/site-packages /usr/local/lib/python3.13/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
+COPY --from=builder /usr/bin/tini /usr/bin/tini
 
 # Set working directory
-WORKDIR /root
+WORKDIR /docs
 
 # Expose MkDocs development server port
 EXPOSE 8000
