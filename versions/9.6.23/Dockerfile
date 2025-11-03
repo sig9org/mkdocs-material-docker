@@ -78,6 +78,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         mkdocs-categories-plugin==0.5.0 \
         mkdocs-cinder==1.2.0 \
         mkdocs-codeinclude-plugin==0.2.1 \
+        mkdocs-drawio==1.12.0 \
         mkdocs-embed-external-markdown==3.0.2 \
         mkdocs-enumerate-headings-plugin==0.6.2 \
         mkdocs-exclude==1.0.2 \

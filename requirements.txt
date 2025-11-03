@@ -59,6 +59,7 @@ mkdocs-build-plantuml-plugin
 mkdocs-categories-plugin
 mkdocs-cinder
 mkdocs-codeinclude-plugin
+mkdocs-drawio
 mkdocs-embed-external-markdown
 mkdocs-enumerate-headings-plugin
 mkdocs-exclude
