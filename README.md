@@ -1,5 +1,10 @@
 # Docker image of Material for MkDoc
 
+> [!Warning]
+> Material for MkDocs is now in maintenance mode
+>
+> This is the last release of Material for MkDocs that will receive new features. Going forward, the Material for MkDocs team focuses on [Zensical](https://zensical.org/), a next-gen static site generator built from first principles. We will provide critical bug fixes and security updates for Material for MkDocs for 12 months at least.
+
 ## How to build
 
 ### Latest
@@ -9,17 +14,17 @@ docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
     --tag sig9/mkdocs-material:latest \
-    versions/9.6.23/
+    versions/9.7.0/
 ```
 
-### 9.6.23
+### 9.7.0
 
 ```sh
 docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
-    --tag sig9/mkdocs-material:9.6.23 \
-    versions/9.6.23/
+    --tag sig9/mkdocs-material:9.7.0 \
+    versions/9.7.0/
 ```
 
 ## Installed extensions
