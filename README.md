@@ -74,6 +74,7 @@ docker buildx build \
 - [mkdocs-publish-control](https://github.com/gabrielbdornas/mkdocs-publish-control) that allows you to control page visibility based on metadata. Perfect for managing draft content or private documentation within your MkDocs site.
 - [mkdocs-publisher](https://mkusz.github.io/mkdocs-publisher/)
 - [mkdocs-redirects](https://github.com/datarobot/mkdocs-redirects) to create page redirects (e.g. for moved/renamed pages).
+- [mkdocs-ruby-plugin](https://github.com/lesliezhu/mkdocs-ruby-plugin) to add pinyin/furigana to Chinese/Japanese Kanji text.
 - [mkdocs-safe-text-plugin](https://github.com/raimon49/mkdocs-safe-text-plugin) for safe text editing with MKDocs.
 - [mkdocs-same-dir](https://oprypin.github.io/mkdocs-same-dir/) allows placing mkdocs.yml in the same directory as documentation.
 - [mkdocs-simple-hooks](https://github.com/aklajnert/mkdocs-simple-hooks) to define your own hooks for mkdocs, without having to create a new package.

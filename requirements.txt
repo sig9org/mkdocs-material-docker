@@ -95,6 +95,7 @@ mkdocs-publish-control
 mkdocs-publisher
 mkdocs-pymdownx-material-extras
 mkdocs-redirects
+mkdocs-ruby-plugin
 mkdocs-safe-text-plugin
 mkdocs-same-dir
 mkdocs-section-index

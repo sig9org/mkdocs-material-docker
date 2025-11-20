@@ -19,25 +19,25 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
         anyio==4.11.0 \
         babel==2.17.0 \
-        backrefs==6.0.1 \
+        backrefs==6.1 \
         beautifulsoup4==4.14.2 \
         bleach==6.3.0 \
         bleach-allowlist==1.0.3 \
         bracex==2.6 \
         brotli==1.2.0 \
-        certifi==2025.10.5 \
+        certifi==2025.11.12 \
         cffi==2.0.0 \
         charset-normalizer==3.4.4 \
         click==8.2.1 \
         colorama==0.4.6 \
-        coverage==7.11.3 \
+        coverage==7.12.0 \
         csscompressor==0.9.5 \
         cssselect2==0.8.0 \
         dacite==1.9.2 \
         decorator==5.2.1 \
         defusedxml==0.7.1 \
         essentials==1.1.8 \
-        essentials-openapi==1.2.1 \
+        essentials-openapi==1.3.0 \
         fonttools==4.60.1 \
         future==1.0.0 \
         geocoder==1.38.1 \
@@ -78,7 +78,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         mkdocs-categories-plugin==0.5.0 \
         mkdocs-cinder==1.2.0 \
         mkdocs-codeinclude-plugin==0.2.1 \
-        mkdocs-drawio==1.12.0 \
+        mkdocs-drawio==1.12.1 \
         mkdocs-embed-external-markdown==3.0.2 \
         mkdocs-enumerate-headings-plugin==0.6.2 \
         mkdocs-exclude==1.0.2 \
@@ -98,7 +98,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         mkdocs-link-marker==0.2.0 \
         mkdocs-literate-nav==0.6.2 \
         mkdocs-localsearch==0.9.2 \
-        mkdocs-macros-plugin==1.4.1 \
+        mkdocs-macros-plugin==1.5.0 \
         mkdocs-markdownextradata-plugin==0.2.6 \
         mkdocs-material==9.7.0 \
         mkdocs-material-extensions==1.3.1 \
@@ -115,6 +115,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         mkdocs-puml==2.1.0 \
         mkdocs-pymdownx-material-extras==2.8 \
         mkdocs-redirects==1.2.2 \
+        mkdocs-ruby-plugin==0.0.3 \
         mkdocs-safe-text-plugin==1.6.1 \
         mkdocs-same-dir==0.1.3 \
         mkdocs-section-index==0.3.10 \
@@ -142,7 +143,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         pymdown-extensions==10.17.1 \
         pyparsing==3.2.5 \
         pyphen==0.17.2 \
-        pytest==9.0.0 \
+        pytest==9.0.1 \
         pytest-cov==3.0.0 \
         python-dateutil==2.9.0.post0 \
         python-dotenv==1.2.1 \
@@ -157,7 +158,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         result==0.17.0 \
         rich==13.9.4 \
         ruamel-yaml==0.18.16 \
-        ruamel-yaml-clib==0.2.14 \
+        ruamel-yaml-clib==0.2.15 \
         setuptools==80.9.0 \
         six==1.17.0 \
         smmap==5.0.2 \
@@ -166,7 +167,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
         super-collections==0.6.2 \
         termcolor==3.2.0 \
         text-unidecode==1.3 \
-        tinycss2==1.4.0 \
+        tinycss2==1.5.0 \
         tinyhtml5==2.0.0 \
         tqdm==4.67.1 \
         typing-extensions==4.15.0 \
