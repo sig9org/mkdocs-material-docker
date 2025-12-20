@@ -5,6 +5,19 @@
 >
 > This is the last release of Material for MkDocs that will receive new features. Going forward, the Material for MkDocs team focuses on [Zensical](https://zensical.org/), a next-gen static site generator built from first principles. We will provide critical bug fixes and security updates for Material for MkDocs for 12 months at least.
 
+- Zensical Official
+    - [Zensical](https://zensical.org/)
+    - [Zensical Documentation](https://zensical.org/docs/get-started/)
+    - [Backlog](https://github.com/orgs/zensical/projects/2/views/1)
+    - [GitHub](https://github.com/zensical/zensical)
+    - [PyPi](https://pypi.org/project/zensical/) ([History](https://pypi.org/project/zensical/#history))
+- Unofficial
+    - DockerHub
+        - [sig9/zensical](https://hub.docker.com/r/sig9/zensical)
+    - GitHub
+        - [Docker image of Zensical](https://github.com/sig9org/zensical-docker)
+        - [Template for Zensical](https://github.com/sig9org/zensical-template)
+
 ## How to build
 
 ### Latest
@@ -14,17 +27,17 @@ docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
     --tag sig9/mkdocs-material:latest \
-    versions/9.7.0/
+    versions/9.7.1/
 ```
 
-### 9.7.0
+### 9.7.1
 
 ```sh
 docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
-    --tag sig9/mkdocs-material:9.7.0 \
-    versions/9.7.0/
+    --tag sig9/mkdocs-material:9.7.1 \
+    versions/9.7.1/
 ```
 
 ## Installed extensions
@@ -94,3 +107,18 @@ docker buildx build \
 - [Mdx Truly Sane Lists](https://github.com/radude/mdx_truly_sane_lists) that makes lists truly sane. Features custom indents for nested lists and fix for messy linebreaks and paragraphs between lists.
 - [Pygments](http://pygments.org/) is a generic syntax highlighter.
 - [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/) is a collection of extensions for Python Markdown.
+
+## References
+
+- Official
+    - [MkDocs](https://www.mkdocs.org/)
+        - [GitHub](https://github.com/mkdocs/mkdocs)
+        - [PyPi](https://pypi.org/project/mkdocs/) ([History](https://pypi.org/project/mkdocs/#history))
+    - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+        - [GitHub](https://github.com/squidfunk/mkdocs-material)
+        - [PyPi](https://pypi.org/project/mkdocs-material/) ([History](https://pypi.org/project/mkdocs-material/#history))
+- Unofficial
+    - DockerHub
+        - [sig9/mkdocs-material](https://hub.docker.com/repository/docker/sig9/mkdocs-material/general)
+    - GitHub
+        - [Docker image of Material for MkDoc](https://github.com/sig9org/mkdocs-material-docker)
