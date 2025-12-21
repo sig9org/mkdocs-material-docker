@@ -18,7 +18,38 @@
         - [Docker image of Zensical](https://github.com/sig9org/zensical-docker)
         - [Template for Zensical](https://github.com/sig9org/zensical-template)
 
-## How to build
+## How to Use
+
+```sh
+docker run --rm -v ${PWD}:/docs sig9/mkdocs-material:9.7.1 mkdocs build --clean
+```
+
+## DockerHub Supported tags
+
+- [9.7.1](https://hub.docker.com/layers/sig9/mkdocs-material/9.7.1/)
+- [9.7.0](https://hub.docker.com/layers/sig9/mkdocs-material/9.7.0/)
+- [9.6.23](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.23/)
+- [9.6.22](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.22/)
+- [9.6.21](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.21/)
+- [9.6.20](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.20/)
+- [9.6.19](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.19/)
+- [9.6.16](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.16/)
+
+## Example CI/CD Configuration for GitLab Pages (.gitlab-ci.yml)
+
+```yaml
+stages:
+  - build
+
+build-job:
+  stage: build
+  script:
+    - docker run --user $(id -u):$(id -g) --rm -v ${PWD}:/docs sig9/mkdocs-material:9.7.1 mkdocs build --clean
+    - rm -rf /var/www/html/*
+    - cp -R site/* /var/www/html/
+```
+
+## How to Build a Docker Container Image
 
 ### Latest
 
@@ -119,6 +150,6 @@ docker buildx build \
         - [PyPi](https://pypi.org/project/mkdocs-material/) ([History](https://pypi.org/project/mkdocs-material/#history))
 - Unofficial
     - DockerHub
-        - [sig9/mkdocs-material](https://hub.docker.com/repository/docker/sig9/mkdocs-material/general)
+        - [sig9/mkdocs-material](https://hub.docker.com/r/sig9/mkdocs-material)
     - GitHub
         - [Docker image of Material for MkDoc](https://github.com/sig9org/mkdocs-material-docker)
