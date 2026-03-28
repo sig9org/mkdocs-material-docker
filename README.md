@@ -21,19 +21,20 @@
 ## How to Use
 
 ```sh
-docker run --rm -v ${PWD}:/docs sig9/mkdocs-material:9.7.1 mkdocs build --clean
+docker run --rm -v ${PWD}:/docs sig9/mkdocs-material:9.7.6 mkdocs build --clean
 ```
 
 ## DockerHub Supported tags
 
-- [9.7.1](https://hub.docker.com/layers/sig9/mkdocs-material/9.7.1/)
-- [9.7.0](https://hub.docker.com/layers/sig9/mkdocs-material/9.7.0/)
-- [9.6.23](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.23/)
-- [9.6.22](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.22/)
-- [9.6.21](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.21/)
-- [9.6.20](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.20/)
-- [9.6.19](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.19/)
-- [9.6.16](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.16/)
+- [9.7.6](https://hub.docker.com/layers/sig9/mkdocs-material/9.7.6/) (2026/03/20)
+- [9.7.1](https://hub.docker.com/layers/sig9/mkdocs-material/9.7.1/) (2025/12/18)
+- [9.7.0](https://hub.docker.com/layers/sig9/mkdocs-material/9.7.0/) (2025/11/11)
+- [9.6.23](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.23/) (2025/11/02)
+- [9.6.22](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.22/) (2025/10/15)
+- [9.6.21](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.21/) (2025/10/01)
+- [9.6.20](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.20/) (2025/09/15)
+- [9.6.19](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.19/) (2025/09/08)
+- [9.6.16](https://hub.docker.com/layers/sig9/mkdocs-material/9.6.16/) (2025/07/27)
 
 ## Example CI/CD Configuration for GitLab Pages (.gitlab-ci.yml)
 
@@ -44,7 +45,7 @@ stages:
 build-job:
   stage: build
   script:
-    - docker run --user $(id -u):$(id -g) --rm -v ${PWD}:/docs sig9/mkdocs-material:9.7.1 mkdocs build --clean
+    - docker run --user $(id -u):$(id -g) --rm -v ${PWD}:/docs sig9/mkdocs-material:9.7.6 mkdocs build --clean
     - rm -rf /var/www/html/*
     - cp -R site/* /var/www/html/
 ```
@@ -58,17 +59,17 @@ docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
     --tag sig9/mkdocs-material:latest \
-    versions/9.7.1/
+    versions/9.7.6/
 ```
 
-### 9.7.1
+### 9.7.6
 
 ```sh
 docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
-    --tag sig9/mkdocs-material:9.7.1 \
-    versions/9.7.1/
+    --tag sig9/mkdocs-material:9.7.6 \
+    versions/9.7.6/
 ```
 
 ## Installed extensions
